@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTOR</title>
+    <style>
+        /* 3 formass de der estilo*/
+        /* 1ª forma - Etiqueta: todos los elementos se ven afectados*/
+        
+        body {
+            background: seashell url("Assets/img/shingeki-no-kyojin-episodios-1080x609.jpeg") no-repeat fixed center;
+            background-size: auto;
+            background-color: #6e205779;
+        }
+        
+        p {
+            color: green;
+            background-color: orange;
+        }
+        
+        div {
+            width: 400px;
+            height: 400px;
+            color: red;
+            background-color: chocolate;
+        }
+        
+        a {
+            text-decoration: line-through;
+            /* lineas al texto*/
+            /* underline(bajo)*/
+            /* overline (linea arriba)*/
+            /* none (quita)*/
+        }
+        
+        #tituloh2 {
+            text-align: center;
+        }
+        
+        #div2 {
+            text-align: end;
+        }
+        /* 2ª forma - Clase:(.): uno o mas elementos se verán afectados*/
+        
+        .parrafo {
+            color: blue;
+            font-size: 16px;
+            /* 1em*/
+            font-style: italic;
+            font-weight: bold;
+            font-family: Arial, Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+        }
+        
+        .web {
+            width: 200px;
+        }
+        /* 3ª forma - ID(#): solo se ve afectado un elemnto*/
+        
+        #p3 {
+            color: indigo;
+        }
+        
+        #p4 {
+            color: cyan;
+            width: 100px;
+            height: 50px;
+        }
+        /*
+        elemento 1
+        .class 10
+        .#id 100
+        */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 id="tituloh2"> algo</h2>
+        <p>parrafo 1</p>
+        <p class="parrafo">parrafo 2</p>
+        <p class="parrafo" id="p3">parrafo 3</p>
+        <p class="parrafo" id="p4">parrafo 4</p>
+        <a href="#">texto</a>
+    </div>
+    <br>
+    <div id="div2">
+        <img class="web" src="Assets/img/shingeki-no-kyojin-episodios-1080x609.jpeg" alt="">
+    </div>
+</body>
+
+</html>
