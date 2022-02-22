@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloques</title>
     <style>
-            /*CSS reset settings here*/
+        /*CSS reset settings here*/
         
         * {
             margin: 0px;
@@ -35,25 +35,37 @@
         
         #main_content {
             min-height: 400px;
-            width: 700px;
+            width: 73%;
             background-color: red;
             display: inline-block;
             padding: 15px;
             margin-left: 15px;
             vertical-align: top;
-            .subcontents {
-                min-height: 200px;
-                width: 210px;
-                background-color: yellow;
-                display: inline-block;
-                margin-right: 10px;
-            }
-            #advertisement {
-                min-height: 120px;
-                width: 660px;
-                background-color: purple;
-                margin-top: 15px;
-            }
+        }
+        
+        .subcontents {
+            min-height: 200px;
+            width: 30%;
+            background-color: yellow;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        #advertisement {
+            min-height: 120px;
+            width: 94%;
+            background-color: purple;
+            margin-top: 15px;
+        }
+        /*pantalla*/
+        
+        @media only screen and(min-width: 1024px) {}
+        /*tablet*/
+        
+        @media only screen and (min-width: 481px) and (max-width:1023px) {}
+        /*celular*/
+        
+        @media only screen and(max-width: 480px) {}
     </style>
 </head>
 
