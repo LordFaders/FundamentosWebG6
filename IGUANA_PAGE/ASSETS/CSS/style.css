@@ -26,3 +26,24 @@ h1 {
 .inline-block {
     display: inline-block;
 }
+
+.letragris {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#fondogris {
+    background-color: #1E1A13;
+    width: 100%;
+    height: 348px;
+}
+
+.footer {
+    background-color: #1E1A13;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+}
