@@ -19,8 +19,21 @@ h1 {
 }
 
 .parrafo {
-    width: 75%;
-    margin: 0 auto;
+    margin: 0;
+    font-weight: 300;
+}
+
+#iduana2 {
+    width: 35%;
+    margin-left: 150px;
+}
+
+#iguana1 {
+    margin-left: 106px;
+}
+
+.iguana2 {
+    display: inline-block;
 }
 
 .inline-block {
@@ -40,6 +53,12 @@ h1 {
 
 .footer {
     background-color: #1E1A13;
+    text-align: center;
+    font-weight: 300;
+}
+
+.footer a {
+    text-decoration: none;
 }
 
 h2 {
