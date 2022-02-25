@@ -32,6 +32,11 @@ h1 {
     margin-left: 106px;
 }
 
+#iguana1 img {
+    width: 399px;
+    height: 237px;
+}
+
 .iguana2 {
     display: inline-block;
 }
