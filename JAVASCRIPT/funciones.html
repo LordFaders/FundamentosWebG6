@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones</title>
+    <script>
+        var calc = function ejemplo(numero1, numero2) {
+            function suma() {
+                return numero1 + numero2
+            }
+
+            function resta() {
+                return numero1 - numero2
+            }
+
+            function multiplicacion() {
+                return numero1 * numero2
+            }
+
+            function division() {
+                return numero1 / numero2
+            }
+            //console.log(suma()) //solo está imprimiendo internamente
+            return multiplicacion()
+        }
+        var operaciones = calc(4, 6) //capturamos el retorno de la funcion ejemplo
+            //console.log(suma()) //no se pueden llamar una funcion interna de otra funcion
+        console.log("operaciones", operaciones)
+
+        //CICLOS
+        var numero = parseInt(prompt("ingrese un numero"))
+
+        for (let i = 0; i <= 10; i++) {
+            if (i == 5) {
+                continue //salta todo, llega al final y continua el proceso
+            }
+            if (i == 8) {
+                break //se sale del for
+            }
+            console.log(`${numero} *${i} = ${numero*i}`)
+        }
+        //console.log(i) error is not defined
+
+        //WHILE
+        var numero2 = parseInt(prompt("ingrese un numero2"))
+        var i = 0
+        while (i <= 10) {
+            i++
+            console.log(`${numero2} *${i} = ${numero2*i}`)
+        }
+
+        //DO-WHILE
+        var numero3 = parseInt(prompt("ingrese un numero3"))
+        var i = 0
+        do {
+            i++
+            console.log(`${numero3} *${i} = ${numero3*i}`)
+        } while (i < 10)
+
+        var nombre = "pedro"
+        var apellido = "gozalez"
+        var rut = 1234567 - 8
+
+        console.log(`su nombre y apellido es: $(nombre) $(apellido), su apellido es: $(apellido)`)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
