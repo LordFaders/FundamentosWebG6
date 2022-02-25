@@ -16,7 +16,7 @@
         var numero2 = 2
         console.log(typeof numero)
 
-        miJavascript() //llamado a la funcion
+        // miJavascript() //llamado a la funcion
 
         function miJavascript() {
             console.log("Hola mundo", 2)
@@ -44,7 +44,65 @@
         }
 
         function validarFormulario() {
+            //alert('holaaaaaa')
+            let nombre = document.getElementById("idNombre").value
+                // alert("su nombre es " + nombre)
+                //let nombre2 = document.getElementsByName("nombre").value
+                // console.log(nombre2)
+                //alert("su nombre es " + nombre2)
+            let apellido = document.getElementById("apellido").value
+            let correo = document.getElementById("correo").value
+            let pass = document.getElementById("password").value
+            let pass2 = document.getElementById("password2").value
+            alert("su nombre es: " + nombre + "apellido es: " + apellido + "correo es: " + correo + "password es: " + password)
+                /*if (nombre == "" || apellido == "" || correo == "" || pass == "") {
+                           alert("debe completar todos los campos requeridos")
+                           document.getElementById("idnombre").select()
+                       } else {
+                           alert("sus datos son: " + nombre + "apellido es: " + apellido + "correo es: " + correo + "password es: " + password)*/
 
+
+            function validarVacios() {
+                let ningunovacio = true
+                if (nombre == "") {
+                    alert("debe ingresar el nombre")
+                    document.getElementById("idNombre").select()
+                    ningunovacio = false
+                }
+                if (apellido == "") {
+                    alert("debe ingresar el apellido")
+                    document.getElementById("apellido").select()
+                    ningunovacio = false
+                }
+                if (correo == "") {
+                    alert("debe ingresar el correo")
+                    document.getElementById("correo").select()
+                    ningunovacio = false
+                }
+                if (pass == "") {
+                    alert("debe ingresar la password")
+                    document.getElementById("password").select()
+                    ningunovacio = false
+                }
+                return ningunovacio
+            }
+            if (validarVacios()) {
+                alert("sus datos son: " + nombre + "apellido es: " + apellido + "correo es: " + correo + "password es: " + password)
+            }
+
+            validaPass(pass, pass2)
+        }
+
+        function validaPass(pass, pass2) {
+            if (pass !== pass2) {
+                alert(`las contraseñas ${pass} y ${pass2} son distintas, deberían ser iguales.`)
+                document.getElementById("password").value = ""
+                document.getElementById("password2").value = ""
+                document.getElementById("password").select()
+
+            } else {
+                alert("las contraseñas coinciden, yeahh!!")
+            }
         }
     </script>
 </head>
@@ -55,13 +113,15 @@
         <!-- method POST: envia los parametros ocultos-->
         <form action="index.html" method="post">
             <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresar nombre"><br>
+            <input type="text" class="form-control" id="idNombre" name="nombre" placeholder="Ingresar nombre"><br>
             <label for="apellido" class="form-label">Apellido:</label>
             <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresar apellido"><br>
             <label for="correo" class="form-label">Correo:</label>
             <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingresar email"><br>
             <label for="password" class="form-label">Password:</label>
-            <input type="password" class="form-control" name="password" id="password" placeholder="Ingresar password">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Ingresar password"><br>
+            <label for="password2" class="form-label"> Confirme password:</label>
+            <input type="password" class="form-control" name="password2" id="password2" placeholder="Ingresar password">
             <br>
             <!-- input radio-->
             <input type="radio" class="form-check-input" id="femenino" name="genero" value="1">
@@ -98,7 +158,7 @@
             <!-- input hidden-->
             <input type="hidden" class="form-control" name="modulo" id="modulo" value="1">
             <!-- botones-->
-            <input type="button" class="btn btn-secondary mb-3" value="validar" onclick="vailidarFormulario();">
+            <input type="button" class="btn btn-secondary mb-3" value="validar" onclick="validarFormulario();">
             <button type="submit" class="btn btn-primary mb-3">Enviar</button>
         </form>
     </div>
