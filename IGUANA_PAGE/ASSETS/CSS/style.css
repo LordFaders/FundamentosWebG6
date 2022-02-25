@@ -51,18 +51,61 @@ h1 {
     height: 348px;
 }
 
-.footer {
-    background-color: #1E1A13;
-    text-align: center;
-    font-weight: 300;
+.iconos {
+    display: inline-block;
+    width: 30%;
 }
 
-.footer a {
-    text-decoration: none;
+#article {
+    text-align: center;
+}
+
+article i {
+    font-size: 3em;
 }
 
 h2 {
     font-weight: 500;
     font-size: 40px;
     text-align: center;
+    padding-top: 75px;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.iguanas img {
+    width: 316px;
+    height: 202px;
+    margin-top: 73px;
+    margin-bottom: 73px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#iguanas {
+    margin-left: 200px;
+}
+
+.iguanas {
+    display: inline-block;
+}
+
+.footer {
+    background-color: #1E1A13;
+    height: 102px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.footer p {
+    padding-top: 39px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffffff;
 }
