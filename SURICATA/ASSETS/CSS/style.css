@@ -1,0 +1,37 @@
+body {
+    font-family: open sans, arial, helvetica;
+}
+
+.navbar {
+    background-color: #E83E8C;
+}
+
+.container-fluid img {
+    width: 132px;
+    height: 53px;
+}
+
+.collapse {
+    margin-left: 900px;
+}
+
+.tarjetas p {
+    display: inline-block;
+}
+
+#article {
+    display: inline-block;
+}
+
+.iconos {
+    display: inline-block;
+}
+
+#footer {
+    background-color: #E83E8C;
+}
+
+#footer img {
+    width: 53.42px;
+    height: 100.45px;
+}
