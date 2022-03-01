@@ -1,0 +1,56 @@
+body {
+    font-family: 'roboto', arial, helvetica, sans-serif;
+}
+
+.container-fluid img {
+    width: 86px;
+    height: 25px;
+}
+
+.collapse {
+    margin-left: 1000px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.card-text {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.card-text1 {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.btn1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.btn2 {
+    margin-left: 618px;
+}
+
+.footer img {
+    width: 82px;
+    height: 24px;
+}
+
+.footer p {
+    font-size: 1em;
+    font-weight: 300;
+}
