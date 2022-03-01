@@ -11,27 +11,32 @@ body {
     height: 53px;
 }
 
+.titulo {
+    font-size: 60px;
+}
+
+.list-group {
+    font-size: 10px;
+}
+
+.btn {
+    font-size: 10px;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 35px;
+}
+
 .collapse {
     margin-left: 900px;
 }
 
-.tarjetas p {
-    display: inline-block;
-}
-
-#article {
-    display: inline-block;
-}
-
-.iconos {
-    display: inline-block;
-}
-
-#footer {
+.footer {
     background-color: #E83E8C;
 }
 
-#footer img {
+.footer img {
     width: 53.42px;
     height: 100.45px;
 }
