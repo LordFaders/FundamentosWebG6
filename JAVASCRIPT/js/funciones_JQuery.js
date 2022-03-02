@@ -87,3 +87,8 @@ $(document).ready(function() {
 
     //fin jquery
 });
+
+let box = document.getElementById('box');
+box.addEventListener('click', function() {
+    alert('click sobre la caja');
+});

@@ -122,3 +122,13 @@ for (let objeto of perros) { //valor = objeto
 
 valores.innerHTML = texto_valores; //insertar en el elemneto
 //}
+
+var pacientes = [
+    { nombre: 'Vladimir', edad: 22, peso: 55, altura: 173 },
+    { nombre: 'Anastasia', edad: 25, peso: 67, altura: 181 },
+    { nombre: 'Alexander', edad: 56, peso: 55, altura: 155 },
+];
+var sumatoria = pacientes.reduce(function(acumulador, p) {
+    return acumulador + p.edad;
+}, 100);
+alert(sumatoria);

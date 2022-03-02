@@ -120,3 +120,8 @@ for (let posicion in datosPersonales) {
     document.write(`elemento ${elemento}, `)
     document.write("<br><hr>");
 }
+
+let edades = [49, 51, 21, 18, 15];
+for (let edades of edad) {
+    console.log(edad)
+}
