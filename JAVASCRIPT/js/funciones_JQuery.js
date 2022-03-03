@@ -78,10 +78,18 @@ $(document).ready(function() {
         alert(valor);
         $("#nombre").val("Chao mundo"); //reemplazar el valor del input
     });
+    //ATTR() -> obtener/asignar el valor de/a un atributo
+    $("#btn20").click(function() {
+        alert($("img").attr("src")); //obteniendo el valor del atributo
+        $("#btn1").attr("class", "btn btn-danger"); //asignar o cambiar el valor
+        $("#btn1").attr("name", "boton1");
+    });
+
+
 
     //Eventos
     //.click()
-    //.click() hover()
+    //.click() over()
 
 
 
