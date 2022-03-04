@@ -11,20 +11,18 @@
         function cachipun() {
             //Cantidad de juegos
             let games = parseInt(prompt(`Ingrese la cantidad de veces que desea jugar`))
-
-            //Jugada del usuario
-            let player = parseInt(prompt(`Hola, juguemos al cachipún. 
+            for (let i = 1; i <= games; i++) {
+                //Jugada del usuario
+                let player = parseInt(prompt(`Hola, juguemos al cachipún. 
             Ingresa tu jugada:
             Ingresa 0 para Piedra,
             Ingresa 1 para Papel
             Ingresa 2 para Tijeras`));
-            //Jugada de la máquina
-            let piedra = 0
-            let papel = 1
-            let tijeras = 2
-            let machine = Math.floor(Math.random() * 3)
-
-            for (let i = 1; i <= games; i++) {
+                //Jugada de la máquina
+                let piedra = 0
+                let papel = 1
+                let tijeras = 2
+                let machine = Math.floor(Math.random() * 3)
 
                 if (player === piedra && machine === piedra) { //piedra v/s piedra
                     alert(`Piedra contra Piedra
@@ -40,7 +38,7 @@
                     alert(`Piedra contra Papel
                     Lo siento, has perdido`)
                 } else if (player === papel && machine === papel) { //papel v/s papel
-                    alert(`$Papel contra Papel
+                    alert(`Papel contra Papel
                     Ha sido un empate`)
                 } else if (player === tijeras && machine === papel) { //tijeras v/s papel
                     alert(`Tijeras contra Papel
