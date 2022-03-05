@@ -100,7 +100,6 @@ let perros = [{
 
 //TITULOS DINAMICOS
 var titulos = document.getElementById("titulos");
-
 var texto_titulos = ""; //acumuladora = acumuladora + algo
 for (let clave in perros[0]) { // solo la posicion 0 ya que se repiten
     texto_titulos = texto_titulos + "<th scope='col'>" + clave.toUpperCase() + "</th>"; //concatenar por cada clave existente
