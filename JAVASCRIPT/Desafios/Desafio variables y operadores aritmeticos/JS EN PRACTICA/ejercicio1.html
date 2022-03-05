@@ -62,9 +62,12 @@
                 document.querySelector(".errorAsunto").innerHTML = "El asunto es requerido."
             } else if (mensaje == "") {
                 document.querySelector(".errorMensaje").innerHTML = "El mensaje es requerido."
+            } else if (nombre == "" && asunto == "" && mensaje == "") {
+                document.querySelector(".errorNombre").innerHTML = "El nombre es requerido."
+                document.querySelector(".errorAsunto").innerHTML = "El asunto es requerido."
+                document.querySelector(".errorMensaje").innerHTML = "El mensaje es requerido."
             } else {
                 document.querySelector(".resultado").innerHTML = "Mensaje enviado con éxito!!!."
-
             }
         }
     </script>
