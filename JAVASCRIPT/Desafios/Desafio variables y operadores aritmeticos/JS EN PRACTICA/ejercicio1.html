@@ -47,27 +47,42 @@
         </div>
     </div>
     <script>
+        clearForm();
         document.getElementById("formulario").addEventListener("submit", function(event) {
             event.preventDefault();
             validarFormulario();
         })
 
+        function clearForm() {
+            document.getElementById("nombre").value = "";
+            document.getElementById("asunto").value = "";
+            document.getElementById("mensaje").value = "";
+            document.querySelector(".errorNombre").innerHTML = ""
+            document.querySelector(".errorAsunto").innerHTML = ""
+            document.querySelector(".errorMensaje").innerHTML = ""
+        }
+
         function validarFormulario() {
+            document.querySelector(".resultado").innerHTML = ""
             let nombre = document.getElementById("nombre").value
             let asunto = document.getElementById("asunto").value
             let mensaje = document.getElementById("mensaje").value
+            let error = false;
             if (nombre == "") {
                 document.querySelector(".errorNombre").innerHTML = "El nombre es requerido."
-            } else if (asunto == "") {
+                error = true
+            }
+            if (asunto == "") {
                 document.querySelector(".errorAsunto").innerHTML = "El asunto es requerido."
-            } else if (mensaje == "") {
+                error = true
+            }
+            if (mensaje == "") {
                 document.querySelector(".errorMensaje").innerHTML = "El mensaje es requerido."
-            } else if (nombre == "" && asunto == "" && mensaje == "") {
-                document.querySelector(".errorNombre").innerHTML = "El nombre es requerido."
-                document.querySelector(".errorAsunto").innerHTML = "El asunto es requerido."
-                document.querySelector(".errorMensaje").innerHTML = "El mensaje es requerido."
-            } else {
+                error = true
+            }
+            if (error == false) {
                 document.querySelector(".resultado").innerHTML = "Mensaje enviado con éxito!!!."
+                clearForm();
             }
         }
     </script>

@@ -37,25 +37,29 @@
         </div>
     </div>
     <script>
-        $(document).ready(function() {
-            $("#btn-1").click(function() {
-                $("#caja").css("background-color", "#e53e3e");
-            });
-            $("#btn-2").click(function() {
-                $("#caja").css("background-color", "#dd6b20");
-            });
-            $("#btn-3").click(function() {
-                $("#caja").css("background-color", "#faf089");
-            });
-            $("#btn-4").click(function() {
-                $("#caja").css("background-color", "#48bb78");
-            });
-            $("#btn-5").click(function() {
-                $("#caja").css("background-color", "#81e6d9");
-            });
-            $("#btn-6").click(function() {
-                $("#caja").css("background-color", "#d53f8c");
-            });
+        document.getElementById("btn-1").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById('caja').setAttribute('style', 'background-color: #e53e3e; border:1px solid black;width: 100%;height: 100%')
+        })
+        document.getElementById("btn-2").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById('caja').setAttribute('style', 'background-color: #dd6b20; border:1px solid black;width: 100%;height: 100%')
+        })
+        document.getElementById("btn-3").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById('caja').setAttribute('style', 'background-color: #faf089; border:1px solid black;width: 100%;height: 100%')
+        })
+        document.getElementById("btn-4").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById('caja').setAttribute('style', 'background-color: #48bb78; border:1px solid black;width: 100%;height: 100%')
+        })
+        document.getElementById("btn-5").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById('caja').setAttribute('style', 'background-color: #81e6d9; border:1px solid black;width: 100%;height: 100%')
+        })
+        document.getElementById("btn-6").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById('caja').setAttribute('style', 'background-color: #d53f8c; border:1px solid black;width: 100%;height: 100%')
         })
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
