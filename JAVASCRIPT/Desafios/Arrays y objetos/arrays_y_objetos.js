@@ -157,6 +157,7 @@ for (let clave in dental) {
         document.write(` | Última atención: ${dental[clave].paciente} - ${dental[clave].prevision}.`)
     }
 }
+
 //Insertar títulos de tabla
 var titulos = document.getElementById("titulos");
 var texto_titulos = "";
@@ -175,6 +176,4 @@ for (let objeto of radiologia) { //valor = objeto
     }
     texto_valores = texto_valores + "<tr>" + valor_fila_td + "</tr>";
 }
-
-valores.innerHTML = texto_valores; //insertar en el elemneto
-//}
+valores.innerHTML = texto_valores; //insertar en el elemento
