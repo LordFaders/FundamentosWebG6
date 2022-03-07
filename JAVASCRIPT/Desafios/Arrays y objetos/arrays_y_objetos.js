@@ -129,36 +129,19 @@ var dental = [{
         prevision: 'ISAPRE'
     }
 ]
-for (let clave in radiologia) {
-    if (radiologia[clave].hora == "11:00") {
-        document.write(`Radiología: Primera atención: ${radiologia[clave].paciente} - ${radiologia[clave].prevision}`)
-    }
-    if (radiologia[clave].hora == "16:00") {
-        document.write(` | Última atención: ${radiologia[clave].paciente} - ${radiologia[clave].prevision}.`)
-    }
+
+if (radiologia[0].hora == "11:00" && radiologia[4].hora == "16:00") {
+    atenciones1.innerHTML = (`Radiología - Primera atención: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[4].paciente} - ${radiologia[4].prevision}.`)
 }
-document.write("<br>")
-document.write("<hr>")
-for (let clave in traumatologia) {
-    if (traumatologia[clave].hora == "08:00") {
-        document.write(`Traumatología: Primera atención: ${traumatologia[clave].paciente} - ${traumatologia[clave].prevision}`)
-    }
-    if (traumatologia[clave].hora == "12:30") {
-        document.write(` | Última atención: ${traumatologia[clave].paciente} - ${traumatologia[clave].prevision}.`)
-    }
+if (traumatologia[0].hora == "08:00" && traumatologia[6].hora == "12:30") {
+    atenciones2.innerHTML = (`Traumatología - Primera atención: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[6].paciente} - ${traumatologia[6].prevision}.`)
 }
-document.write("<br>")
-document.write("<hr>")
-for (let clave in dental) {
-    if (dental[clave].hora == "08:30") {
-        document.write(`Dental: Primera atención: ${dental[clave].paciente} - ${dental[clave].prevision}`)
-    }
-    if (dental[clave].hora == "14:00") {
-        document.write(` | Última atención: ${dental[clave].paciente} - ${dental[clave].prevision}.`)
-    }
+if (dental[0].hora == "08:30" && dental[5].hora == "14:00") {
+    atenciones3.innerHTML = (`Dental - Primera atención: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[5].paciente} - ${dental[5].prevision}.`)
 }
 
-//Insertar títulos de tabla
+//Tabla Radiología
+//Insertar títulos
 var titulos = document.getElementById("titulos");
 var texto_titulos = "";
 for (let clave in radiologia[0]) {
@@ -170,6 +153,48 @@ titulos.innerHTML = texto_titulos;
 var valores = document.getElementById("valores"); //donde escribimos
 var texto_valores = ""; //acumuladora = acumuladora + algo
 for (let objeto of radiologia) { //valor = objeto
+    var valor_fila_td = ""; //Acumuladora interna
+    for (let clave in objeto) {
+        valor_fila_td = valor_fila_td + "<td>" + objeto[clave] + "</td>"; //objeto[clave] -> obtener el valor
+    }
+    texto_valores = texto_valores + "<tr>" + valor_fila_td + "</tr>";
+}
+valores.innerHTML = texto_valores; //insertar en el elemento
+
+//Tabla Traumatologia
+//Insertar títulos
+var titulos = document.getElementById("titulos2");
+var texto_titulos = "";
+for (let clave in traumatologia[0]) {
+    texto_titulos = texto_titulos + "<th scope='col'>" + clave.toUpperCase() + "</th>";
+}
+titulos.innerHTML = texto_titulos;
+
+//Insertar valores de filas
+var valores = document.getElementById("valores2"); //donde escribimos
+var texto_valores = ""; //acumuladora = acumuladora + algo
+for (let objeto of traumatologia) { //valor = objeto
+    var valor_fila_td = ""; //Acumuladora interna
+    for (let clave in objeto) {
+        valor_fila_td = valor_fila_td + "<td>" + objeto[clave] + "</td>"; //objeto[clave] -> obtener el valor
+    }
+    texto_valores = texto_valores + "<tr>" + valor_fila_td + "</tr>";
+}
+valores.innerHTML = texto_valores; //insertar en el elemento
+
+//Tabla Dental
+//Insertar títulos
+var titulos = document.getElementById("titulos3");
+var texto_titulos = "";
+for (let clave in dental[0]) {
+    texto_titulos = texto_titulos + "<th scope='col'>" + clave.toUpperCase() + "</th>";
+}
+titulos.innerHTML = texto_titulos;
+
+//Insertar valores de filas
+var valores = document.getElementById("valores3"); //donde escribimos
+var texto_valores = ""; //acumuladora = acumuladora + algo
+for (let objeto of dental) { //valor = objeto
     var valor_fila_td = ""; //Acumuladora interna
     for (let clave in objeto) {
         valor_fila_td = valor_fila_td + "<td>" + objeto[clave] + "</td>"; //objeto[clave] -> obtener el valor
