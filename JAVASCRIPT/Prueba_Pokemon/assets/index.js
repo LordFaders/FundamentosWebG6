@@ -1,8 +1,8 @@
 $(document).ready(function() { //Inicio de JQuery
 
-    $("form").submit(function() {
+    $("form").submit(function(e) {
 
-        event.preventDefault();
+        e.preventDefault();
 
         let valueInput = $("#pokemonInput").val();
 
