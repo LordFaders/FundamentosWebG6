@@ -60,7 +60,7 @@ $(document).ready(function() {
                     for (let key in data.powerstats) {
                         if (data.powerstats.val = null) {
                             $("#heroStats").html(`
-           <div class=container>
+                            <div class=container>
                             <h3 class="error d-flex align-items-center">No existen estadísticas de poderes para este superHero.</h3>
                             </div>
                             `)
