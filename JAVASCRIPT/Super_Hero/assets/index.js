@@ -58,34 +58,35 @@ $(document).ready(function() {
                     let estadisticas = [];
 
                     for (let key in data.powerstats) {
-                        if (data.powerstats.val = null) {
+                        if (data.powerstats[key] == null) {
                             $("#heroStats").html(`
                             <div class=container>
-                            <h3 class="error d-flex align-items-center">No existen estadísticas de poderes para este superHero.</h3>
+                            <h3 class="error d-flex align-items-center mt-5">No existen estadísticas de poderes para este superHero.</h3>
                             </div>
                             `)
                         } else {
                             estadisticas.push({ y: data.powerstats[key], name: key })
+
+                            var chart = new CanvasJS.Chart("heroStats", {
+                                exportEnabled: true,
+                                animationEnabled: true,
+                                title: {
+                                    text: `Estadísticas de poder Para ${nombre}`
+                                },
+                                legend: {
+                                    cursor: "pointer",
+                                    itemclick: explodePie
+                                },
+                                data: [{
+                                    type: "pie",
+                                    showInLegend: true,
+                                    toolTipContent: "{name}: <strong>{y}%</strong>",
+                                    indexLabel: "{name} - {y}%",
+                                    dataPoints: estadisticas
+                                }]
+                            });
+                            chart.render();
                         }
-                        var chart = new CanvasJS.Chart("heroStats", {
-                            exportEnabled: true,
-                            animationEnabled: true,
-                            title: {
-                                text: `Estadísticas de poder Para ${nombre}`
-                            },
-                            legend: {
-                                cursor: "pointer",
-                                itemclick: explodePie
-                            },
-                            data: [{
-                                type: "pie",
-                                showInLegend: true,
-                                toolTipContent: "{name}: <strong>{y}%</strong>",
-                                indexLabel: "{name} - {y}%",
-                                dataPoints: estadisticas
-                            }]
-                        });
-                        chart.render();
 
                         function explodePie(e) {
                             if (typeof(e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
